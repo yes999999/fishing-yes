@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0, width=device-width">
+    <link rel="stylesheet" href="style.css">
+    <title>钓鱼游戏（有逃脱）1.0</title>
+
+</head>
+<body>
+    <div id="container">
+        <div id="info">
+            <h2 align="center">第<span id="Round"></span>轮</h2>
+            <p style="font-size:25px;">大鱼(+10)：<span id="num-big-fish"></span>条(<span id="big-fish-ratio"></span>%)</p>
+            <p style="font-size:25px;">小鱼(-2)：<span id="num-small-fish"></span>条(<span id="small-fish-ratio"></span>%)</p>
+            <p style="font-size:25px;">上一轮捕鱼情况：(逃脱<span id="escape-fish"></span>条)<p align="center" style="font-size:25px;">+<span id="last-win"></span>-<span id="last-lose"></span>=<span id="last-total"></span></p></p>
+            <p style="font-size:25px;">初始金币：<span id="or-coins"></span> (2金币/鱼竿)</p>
+            <p style="font-size:25px;">总金币：<span id="total-coins"></span> （含初始金币）</p>
+            <p align="right" style="font-size:25px;"><a href="游戏说明.html">游戏说明</a><p align="right" style="font-size:25px;"><a href="游戏说明.html">练习模式</a></p></p>
+
+        </div>
+        <div id="fishing-rods">
+                <span id="bubble1" >添加鱼竿</span>
+                <span id="bubble2" >添加鱼竿</span>
+                <span id="bubble3" >添加鱼竿</span>
+                <span id="bubble4" >添加鱼竿</span>
+                <span id="bubble5" >添加鱼竿</span>
+                <span id="sub1" style="display: none;">取消添加</span>
+                <span id="sub2" style="display: none;">取消添加</span>
+                <span id="sub3" style="display: none;">取消添加</span>
+                <span id="sub4" style="display: none;">取消添加</span>
+                <span id="sub5" style="display: none;">取消添加</span>
+                <img id="rod1" src="images/鱼竿1.png" alt="Fishing Rod" style="display: none;">
+                <img id="rod2" src="images/鱼竿1.png" alt="Fishing Rod" style="display: none;">
+                <img id="rod3" src="images/鱼竿1.png" alt="Fishing Rod" style="display: none;">
+                <img id="rod4" src="images/鱼竿1.png" alt="Fishing Rod" style="display: none;">
+                <img id="rod5" src="images/鱼竿1.png" alt="Fishing Rod" style="display: none;">
+        </div>
+        <img id="fishgroup" src="images/鱼群.gif" alt="Fishing Group" style="display: none;">
+        <div id="text">
+            <p style="font-size:25px;">请点击购买您要使用的鱼竿，选择结束后请开始钓鱼！</p>
+        </div>
+        <div id="buttons">
+            <button id="start-button">开始钓鱼</button>
+            <button id="stop-button">停止钓鱼</button>
+        </div>
+        <div class="result" id="result1" style="display: none;">
+            <p style="font-size:25px;">恭喜您钓到<span id="big-fish-catch1"></span>条大鱼，<span id="small-fish-catch1"></span>条小鱼!</p>
+            <p style="font-size:25px;">本轮获得金币：<span id="round-coins1"></span></p>
+            <p align="center" style="font-size:10px;">等待5s点击继续...</p>
+        </div>
+        <div class="result" id="result2" style="display: none;">
+            <p style="font-size:25px;">很遗憾，有<span id="fish-escape"></span>条鱼逃脱，您钓到<span id="big-fish-catch2"></span>条大鱼，<span id="small-fish-catch2"></span>条小鱼</p>
+            <p style="font-size:25px;">本轮获得金币：<span id="round-coins2"></span></p>
+            <p align="center" style="font-size:10px;">等待5s点击继续...</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
